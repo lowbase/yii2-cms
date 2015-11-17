@@ -1,0 +1,34 @@
+# Устанавливаем кодировку UTF-8 по умолчанию
+AddDefaultCharset UTF-8
+
+# Включаем преобразование ссылок при наличии модуля Rewrite
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+</IfModule>
+
+<IfModule mod_rewrite.c>
+# Правильное подключение assets, скриптов и css для админки /admin...
+    RewriteCond %{REQUEST_URI} ^/(admin)
+    RewriteRule ^admin/assets/(.*)$ backend/web/assets/$1 [L]
+    RewriteRule ^admin/css/(.*)$ backend/web/css/$1 [L]
+    RewriteRule ^admin/js/(.*)$ backend/web/js/$1 [L]
+    RewriteRule ^admin/attaches/(.*)$ frontend/web/attaches/$1 [L]
+    RewriteRule ^admin/files/(.*)$ frontend/web/attaches/$1 [L]
+# Указание стартового index файла для админки
+    RewriteCond %{REQUEST_URI} !^/backend/web/(assets|css|js|attaches|files)/
+    RewriteCond %{REQUEST_URI} ^/(admin)
+    RewriteRule ^.*$ backend/web/index.php [L]
+# Правильное подключение assets, скриптов и css для клиентской части /...
+    RewriteCond %{REQUEST_URI} ^/(assets|css|js|attaches|files)
+    RewriteRule ^assets/(.*)$ frontend/web/assets/$1 [L]
+    RewriteRule ^css/(.*)$ frontend/web/css/$1 [L]
+    RewriteRule ^js/(.*)$ frontend/web/js/$1 [L]
+    RewriteRule ^attaches/(.*)$ frontend/web/attaches/$1 [L]
+    RewriteRule ^files/(.*)$ frontend/web/files/$1 [L]
+# Указание стартового index файла для клиентской части /....
+    RewriteCond %{REQUEST_URI} !^/(frontend|backend)/web/(assets|css|js|attaches|files)/
+    RewriteCond %{REQUEST_URI} !index.php
+    RewriteCond %{REQUEST_FILENAME} !-f [OR]
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^.*$ frontend/web/index.php
+</IfModule>

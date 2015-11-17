@@ -1,0 +1,275 @@
+html,
+body {
+    height: 100%;
+    background-color: #f5f5f5;
+}
+
+.wrap {
+    min-height: 100%;
+    height: auto;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.wrap > .container {
+    padding: 25px;
+    background: #fff;
+    box-shadow: 0 0 4px #ccc;
+}
+
+.header {
+    padding-bottom: 20px;
+}
+
+.footer {
+    position: relative;
+    min-height: 60px;
+    padding-top: 40px;
+    color: #aaa;
+    font-size: 10pt;
+}
+
+.jumbotron {
+    text-align: center;
+    background-color: transparent;
+}
+
+.jumbotron .btn {
+    font-size: 21px;
+    padding: 14px 24px;
+}
+
+.not-set {
+    color: #c55;
+    font-style: italic;
+}
+
+/* add sorting icons to gridview sort links */
+a.asc:after, a.desc:after {
+    position: relative;
+    top: 1px;
+    display: inline-block;
+    font-family: 'Glyphicons Halflings, Arial';
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    padding-left: 5px;
+}
+
+a.asc:after {
+    content: /*"\e113"*/ "\e151";
+}
+
+a.desc:after {
+    content: /*"\e114"*/ "\e152";
+}
+
+.sort-numerical a.asc:after {
+    content: "\e153";
+}
+
+.sort-numerical a.desc:after {
+    content: "\e154";
+}
+
+.sort-ordinal a.asc:after {
+    content: "\e155";
+}
+
+.sort-ordinal a.desc:after {
+    content: "\e156";
+}
+
+.grid-view th {
+    white-space: nowrap;
+}
+
+.hint-block {
+    display: block;
+    margin-top: 5px;
+    color: #999;
+}
+
+.error-summary {
+    color: #a94442;
+    background: #fdf7f7;
+    border-left: 3px solid #eed3d7;
+    padding: 10px 20px;
+    margin: 0 0 15px 0;
+}
+
+/*Шапка сайта*/
+
+.login {
+    text-align: left;
+    padding-bottom: 10px;
+}
+
+.avatar{
+    float:left;
+    display: block;
+    margin-right:15px;
+    border-radius: 50px;
+    margin-top: -10px;
+    border: 3px #fff solid;
+    box-shadow: 1px 1px 1px #777;
+}
+
+.logo{
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.logo img{
+    margin-top: -15px;
+    max-width: 100%;
+    max-height: 100px;
+}
+
+/*Ссылки*/
+
+.lnk{
+    text-decoration: none;
+    border-bottom: dotted 1px;
+    color: #f17918
+}
+
+.link{
+    text-decoration: none;
+    border-bottom: solid 1px;
+    color: #f17918;
+}
+
+a:hover{
+    text-decoration: none;
+    color: #f00;
+}
+
+a:active, a:focus{
+    text-decoration: none;
+    color: #f00;
+}
+
+/*Форма регистрации/авторизации*/
+
+.form-signin {
+    max-width: 400px;
+    padding: 15px;
+    margin: 0 auto;
+}
+.form-signin .checkbox {
+    margin-bottom: 10px;
+}
+.form-signin .checkbox {
+    font-weight: normal;
+}
+.form-signin .form-control {
+    position: relative;
+    height: auto;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.form-signin input {
+    margin-bottom: 10px;
+}
+
+/*Кнопки входа через соц. сети*/
+
+.social a.enter{
+    float: left;
+    display: block;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+
+.social a.oauth-vk, a.vk {
+    float: left;
+    display: block;
+    width: 40px;
+    height: 40px;
+    background: url('image/social.png') -160px 0 no-repeat;
+}
+
+.social a.oauth-vk:hover,
+.social a.oauth-vk-active,
+a.vk:hover,
+a.vk-active {
+    float: left;
+    display: block;
+    width: 40px;
+    height: 40px;
+    background: url('image/social.png') -160px -200px no-repeat;
+}
+
+.social a.oauth-fb, a.fb {
+    float: left;
+    display: block;
+    margin-left: 5px;
+    width: 40px;
+    height: 40px;
+    background: url('image/social.png') 0 0 no-repeat;
+}
+
+.social a.oauth-fb:hover,
+.social a.oauth-fb-active,
+a.fb:hover,
+a.fb-active {
+    float: left;
+    display: block;
+    margin-left: 5px;
+    width: 40px;
+    height: 40px;
+    background: url('image/social.png') 0 -200px no-repeat;
+}
+
+.social a.oauth-ok, a.ok {
+    float: left;
+    display: block;
+    margin-left: 5px;
+    width: 40px;
+    height: 40px;
+    background: url('image/social.png') -120px 0 no-repeat;
+}
+
+.social a.oauth-ok:hover,
+.social a.oauth-ok-active,
+a.ok:hover,
+a.ok-active {
+    float: left;
+    display: block;
+    margin-left: 5px;
+    width: 40px;
+    height: 40px;
+    background: url('image/social.png') -120px -200px no-repeat;
+}
+
+@media (max-width: 768px) {
+    .social {
+        margin: 0 auto;
+        padding-bottom: 50px;
+        width: 180px;
+    }
+}
+
+@media (max-width: 768px) {
+    .ava {
+        text-align: center;
+    }
+}
+
+/* Личный кабинет */
+
+.new_password{
+    display: none;
+}
+
+.big_avatar img{
+    max-height: 200px;
+    max-width: 200px;
+    margin-bottom: 20px;
+    display: inline-block;
+}
