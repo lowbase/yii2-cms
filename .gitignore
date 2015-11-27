@@ -1,8 +1,3 @@
-/environments
-
-# yii console command
-/yii
-
 # phpstorm project files
 .idea
 

@@ -26,20 +26,6 @@
         "mihaildev/yii2-ckeditor": "*"
     },
     "require-dev": {
-        "php": ">=5.4.0",
-        "yiisoft/yii2": ">=2.0.6",
-        "yiisoft/yii2-bootstrap": "*",
-        "yiisoft/yii2-swiftmailer": "*",
-        "yiisoft/yii2-imagine": "~2.0.0",
-        "nodge/yii2-eauth": "~2.0",
-        "paulzi/yii2-nested-intervals" : "*",
-        "kartik-v/yii2-mpdf":"*",
-        "kartik-v/yii2-widgets":"*",
-        "kartik-v/yii2-grid":"*",
-        "kartik-v/yii2-field-range": "*",
-        "kartik-v/bootstrap-fileinput": "dev-master",
-        "mihaildev/yii2-elfinder": "*",
-        "mihaildev/yii2-ckeditor": "*",
         "yiisoft/yii2-codeception": "*",
         "yiisoft/yii2-debug": "*",
         "yiisoft/yii2-gii": "*",
@@ -51,7 +37,7 @@
     "extra": {
         "asset-installer-paths": {
             "npm-asset-library": "vendor/npm",
-            "bower-asset-library": "vendor/bower"
+            "bower-asset-library": "vendor/bower/bower-asset"
         }
     }
 }
