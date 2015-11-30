@@ -31,7 +31,8 @@ return [
         ],
         'request'=>[
             'class' => 'common\components\Request',
-            'web'=> '/frontend/web'
+            'web'=> '/frontend/web',
+            'cookieValidationKey' => 'enter-your-validation-key'
         ],
         'urlManager'=>[
             'enablePrettyUrl'=> true,
