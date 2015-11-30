@@ -35,21 +35,7 @@
         "process-timeout": 1800
     },
     "extra": {
-    "yii\\composer\\Installer::postCreateProject": {
-      "setPermission": [
-        {
-          "frontend/runtime": "0777",
-          "backend/runtime": "0777",
-          "web/assets": "0777",
-          "yii": "0755"
-        }
-      ],
-      "generateCookieValidationKey": [
-        "backend/config/main.php",
-        "frontend/config/main.php"
-      ]
-    },
-    "asset-installer-paths": {
+      "asset-installer-paths": {
       "npm-asset-library": "vendor/npm",
       "bower-asset-library": "vendor/bower"
     }
