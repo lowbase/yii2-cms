@@ -45,7 +45,8 @@
         }
       ],
       "generateCookieValidationKey": [
-        "common/config/main.php"
+        "backend/config/main.php",
+        "frontend/config/main.php"
       ]
     },
     "asset-installer-paths": {
