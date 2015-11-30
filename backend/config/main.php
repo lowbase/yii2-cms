@@ -20,7 +20,8 @@ return [
         'request'=>[
             'class' => 'common\components\Request',
             'web'=> '/backend/web',
-            'adminUrl' => '/admin'
+            'adminUrl' => '/admin',
+            'cookieValidationKey' => 'enter-your-validation-key'
         ],
         'urlManager'=>[
             /**
