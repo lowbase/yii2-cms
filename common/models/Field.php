@@ -39,8 +39,7 @@ class Field extends \yii\db\ActiveRecord
     {
         return [
             [['option_id', 'document_id'], 'required'],
-            [['option_id', 'document_id', 'position'], 'integer'],
-            [['value'], 'string']
+            [['option_id', 'document_id', 'position'], 'integer']
         ];
     }
 
