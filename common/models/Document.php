@@ -144,8 +144,8 @@ class Document extends \yii\db\ActiveRecord
         $rules[] = [['created_user_id', 'updated_user_id', 'template_id', 'parent_id', 'root_id',
             'is_folder', 'status','last_parent_id','last_template_id'], 'integer'];
         $rules[] = ['alias', 'unique'];
-        $rules[] = [array_merge(['annotation', 'content', 'meta_description',
-            'meta_keywords'], $options), 'string'];
+        $rules[] = [['annotation', 'content', 'meta_description',
+            'meta_keywords'], 'string'];
         $rules[] = [['name', 'title', 'alias', 'img', 'created_user_name', 'updated_user_name',
             'root_name', 'parent_name'], 'string', 'max' => 255];
         $rules[] = ['status', 'in', 'range' => array_keys(self::getStatuses())];
