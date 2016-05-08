@@ -1,29 +1,22 @@
 {
-    "name": "lowbase/yii2-lowbase",
-    "description": "Yii 2 CMS for programmers",
-    "keywords": ["yii2", "framework", "cms", "advanced", "project template"],
+    "name": "lowbase/cms",
+    "description": "Yii 2 CMS",
+    "keywords": ["yii2", "framework", "cms", "lowbase"],
     "homepage": "http://www.lowbase.ru/",
     "type": "project",
     "license": "BSD-3-Clause",
     "support": {
-        "source": "https://github.com/lowbase/yii2-lowbase"
+        "source": "https://github.com/lowbase/cms"
     },
     "minimum-stability": "dev",
     "require": {
         "php": ">=5.4.0",
-        "yiisoft/yii2": ">=2.0.6",
+        "yiisoft/yii2": ">=2.0.5",
         "yiisoft/yii2-bootstrap": "*",
         "yiisoft/yii2-swiftmailer": "*",
-        "yiisoft/yii2-imagine": "~2.0.0",
-        "nodge/yii2-eauth": "~2.0",
-        "paulzi/yii2-nested-intervals" : "*",
-        "kartik-v/yii2-mpdf":"*",
-        "kartik-v/yii2-widgets":"*",
-        "kartik-v/yii2-grid":"*",
-        "kartik-v/yii2-field-range": "*",
-        "kartik-v/bootstrap-fileinput": "dev-master",
-        "mihaildev/yii2-elfinder": "*",
-        "mihaildev/yii2-ckeditor": "*"
+        "lowbase/yii2-user": "*",
+        "lowbase/yii2-document": "*",
+        "dmstr/yii2-adminlte-asset": "2.*"
     },
     "require-dev": {
         "yiisoft/yii2-codeception": "*",
@@ -34,10 +27,27 @@
     "config": {
         "process-timeout": 1800
     },
+    "scripts": {
+        "post-create-project-cmd": [
+            "yii\\composer\\Installer::postCreateProject"
+        ]
+    },
     "extra": {
-      "asset-installer-paths": {
-      "npm-asset-library": "vendor/npm",
-      "bower-asset-library": "vendor/bower"
+        "yii\\composer\\Installer::postCreateProject": {
+            "setPermission": [
+                {
+                    "runtime": "0777",
+                    "web/assets": "0777",
+                    "yii": "0755"
+                }
+            ],
+            "generateCookieValidationKey": [
+                "config/web.php"
+            ]
+        },
+        "asset-installer-paths": {
+            "npm-asset-library": "vendor/npm",
+            "bower-asset-library": "vendor/bower"
+        }
     }
-  }
 }

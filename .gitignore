@@ -17,8 +17,6 @@ Thumbs.db
 
 # composer itself is not needed
 composer.phar
-# composer lock is not needed
-composer.lock
 
 # Mac DS_Store Files
 .DS_Store
