@@ -47,7 +47,7 @@ class DocumentController extends \lowbase\document\controllers\DocumentControlle
                         'roles' => ['documentCreate'],
                     ],
                     [
-                        'actions' => ['update', 'multiactive', 'multiblock', 'change', 'field'],
+                        'actions' => ['update', 'multiactive', 'multiblock', 'change', 'field', 'move'],
                         'allow' => true,
                         'roles' => ['documentUpdate'],
                     ],
