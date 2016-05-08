@@ -18,7 +18,7 @@ CMS lowbase составлена на основе независимых мод
 Установка lowBase
 -----------------
 
-* `composer create-project lowbase/yii2-lowbase project-name dev-master`
+* `composer create-project lowbase/yii2-cms project-name dev-master`
 * Создаем пустую базу данных и настраиваем соединение с базой в файле config/db.php
 ```
 'db' => [
