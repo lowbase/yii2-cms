@@ -151,6 +151,8 @@ $config = [
                 'like/<id:\d+>' => 'document/like',
                 //Отображение документов
                 '<alias>' => 'document/show',
+                //Стартовая страница сайта
+                '/' => 'site/index',
             ],
         ],
         'i18n' => [
