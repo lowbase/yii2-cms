@@ -15,7 +15,7 @@ class PathController extends \mihaildev\elfinder\PathController {
     public $root = [
         'baseUrl'=>'',
         'basePath'=>'@app/web',
-        'path' => 'attach/document',
+        'path' => 'attach',
         'name' => 'Файлы',
     ];
 
